@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Class Demo</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="body">
+    <div class="">
+      <!-- Navbar-->
+      <nav class="navbar navbar-expand-lg navbar-green nb-background-color sticky-top rounded-pill w-75 justify-content-center" id = "navBarr">
+        <style>
+          .custom-navbar {
+            background-color: rgba(255, 255, 255, 0.8);
+          }
+        </style>
+        <!-- lg = large breakpoint, navbar-light = make text dark-->
+        <div class="container">
+          <a href="/index.html" class="navbar-brand">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="48" viewBox="0 0 512 512" fill="#023020"class="d-inline-block align-text-top w-50"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M272 96c-78.6 0-145.1 51.5-167.7 122.5c33.6-17 71.5-26.5 111.7-26.5l88 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-16 0-72 0s0 0 0 0c-16.6 0-32.7 1.9-48.3 5.4c-25.9 5.9-49.9 16.4-71.4 30.7c0 0 0 0 0 0C38.3 298.8 0 364.9 0 440l0 16c0 13.3 10.7 24 24 24s24-10.7 24-24l0-16c0-48.7 20.7-92.5 53.8-123.2C121.6 392.3 190.3 448 272 448l1 0c132.1-.7 239-130.9 239-291.4c0-42.6-7.5-83.1-21.1-119.6c-2.6-6.9-12.7-6.6-16.2-.1C455.9 72.1 418.7 96 376 96L272 96z"/></svg>
+          </a>
+
+          <!-- Hamburger Menu Button-->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navmenu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Collapsible nabar menu with custom hover underline CSS animation-->
+          <div class="collapse navbar-collapse" id="navmenu">
+            <!-- Links to hamburger menu button-->
+            <ul class="navbar-nav ms-auto">
+              <!-- ms-auto provides auto margin spacing-->
+              <li class="nav-item">
+                <a
+                  href="author.html"
+                  class="nav-link hover-underline-animation nbMenuItem"
+                  >Author
+              </a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="procedure.html"
+                  class="nav-link hover-underline-animation nbMenuItem"
+                  >Procedure</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="results.html"
+                  class="nav-link hover-underline-animation nbMenuItem"
+                  >Results</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<!-- About the Author -->
+<section class="author">
+  <div class="container">
+    <br>
+    <h1 class="text-center about-team">About the Author</h1>
+    <hr><br>
+
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center">
+        <img src="img/IMG_3288.jpg" alt="Image of Ayden Pinto, the author" class="rounded-pill img-fluid">
+      </div>
+      <div class="col-md-8">
+        <h4 class="card-title">Ayden Pinto</h4>
+        <h5>Student at High Technology High School</h5>
+        <p class="card-text">
+          Author of "Investigating the Effect of Coconut Milk on the Growth Height and Number of Stems of
+          <em>Ocimum Basilicum</em> Plants"
+        </p>
+      </div>
+    </div>
+  </div>
+  
+</section>
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel"></div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- Footer -->
+<footer class="p-5 footer text-light text-center position-relative">
+  <div class="container">
+    <p class="lead">Copyright &copy; Ayden Pinto SE 2024-2025</p>
+    
+    <a href="#" class="position-absolute bottom-0 end-0 p-5 animate-bounce">
+      <i class="bi bi-arrow-up-circle h2 icon-white"></i>
+    </a>
+  </div>  
+</footer>

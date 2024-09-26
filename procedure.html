@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+    <style>
+      .procedure img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bootstrap Class Demo</title>
@@ -26,17 +34,18 @@
     ></script>
   </head>
   <body class="body">
-    <div class="container-lg">
+    <div class="">
       <!-- Navbar-->
-      <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
+      <nav class="navbar navbar-expand-lg navbar-green nb-background-color sticky-top rounded-pill w-75 justify-content-center" id = "navBarr">
+        <style>
+          .custom-navbar {
+            background-color: rgba(255, 255, 255, 0.8);
+          }
+        </style>
         <!-- lg = large breakpoint, navbar-light = make text dark-->
         <div class="container">
-          <a href="index.html" class="navbar-brand">
-            <img
-              src="img/droplet.png"
-              alt="Water Logo"
-              class="d-inline-block align-text-top w-50"
-            />
+          <a href="/index.html" class="navbar-brand">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="48" viewBox="0 0 512 512" fill="#023020"class="d-inline-block align-text-top w-50"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M272 96c-78.6 0-145.1 51.5-167.7 122.5c33.6-17 71.5-26.5 111.7-26.5l88 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-16 0-72 0s0 0 0 0c-16.6 0-32.7 1.9-48.3 5.4c-25.9 5.9-49.9 16.4-71.4 30.7c0 0 0 0 0 0C38.3 298.8 0 364.9 0 440l0 16c0 13.3 10.7 24 24 24s24-10.7 24-24l0-16c0-48.7 20.7-92.5 53.8-123.2C121.6 392.3 190.3 448 272 448l1 0c132.1-.7 239-130.9 239-291.4c0-42.6-7.5-83.1-21.1-119.6c-2.6-6.9-12.7-6.6-16.2-.1C455.9 72.1 418.7 96 376 96L272 96z"/></svg>
           </a>
 
           <!-- Hamburger Menu Button-->
@@ -56,9 +65,9 @@
               <!-- ms-auto provides auto margin spacing-->
               <li class="nav-item">
                 <a
-                  href="authors.html"
+                  href="author.html"
                   class="nav-link hover-underline-animation nbMenuItem"
-                  >Authors</a
+                  >Author</a
                 >
               </li>
               <li class="nav-item">
@@ -86,7 +95,7 @@
           <br>
           <div class="text-center">
             <h1>Procedure</h1>
-            <h2>Using a numbered list, describe your procedure (include pictures)</h2>
+            <h2>How exactly was this research carried out?</h2>
           </div>
 
           <hr><br>
@@ -107,22 +116,20 @@
                   <h3>1</h3>
                 </th>
                 <td>
-                  <h3 class="howTo">Start Python Flask server</h3>
+                  <h3 class="howTo">Take coconut milk out of fridge</h3>
                 </td>
-                <td class="text-center"><img src="img/python-logo.png" alt="Python Logo"></td>
+                <td class="text-center"><img src="img/Step1.png" alt="Take coconut milk out of fridge"></td>
               </tr>
 
               <tr class="align-middle">
-                
-              </tr>
                 <!-- scope = row specifies header cell is the header is the header for that row-->
                 <th scope="row" class="table-secondary">
                   <h3>2</h3>
                 </th>
                 <td>
-                  <h3 class="howTo">Power circuit on.  SR-04/05 transmits data to Nano IoT</h3>
+                  <h3 class="howTo">Fill an empty flask with water</h3>
                 </td>
-                <td class="text-center"><img src="img/range-finder-tp.png" alt="Range Finder"></td>
+                <td class="text-center"><img src="img/step2.png" alt="Fill an empty flask with water"></td>
               </tr>
 
               <tr class="align-middle">
@@ -131,9 +138,9 @@
                   <h3>3</h3>
                 </th>
                 <td>
-                  <h3 class="howTo">Nano IoT connects to PC via WiFi and sends data to Arduino program</h3>
+                  <h3 class="howTo">Mix the coconut milk using a magnetic mixer</h3>
                 </td>
-                <td class="text-center"><img src="img/nano33-iot3.png" alt="Nano 33 IoT"></td>
+                <td class="text-center"><img src="img/step3.png" alt="Mix the coconut milk using a magnetic mixer"></td>
               </tr>
 
               <tr class="align-middle">
@@ -142,9 +149,9 @@
                   <h3>4</h3>
                 </th>
                 <td>
-                  <h3 class="howTo">Arduino and Flask server communicate via HTTP request protocol</h3>
+                  <h3 class="howTo">Pour the designated amount of coconut milk and water into a graduated cylinder</h3>
                 </td>
-                <td class="text-center"><img src="img/arduino-logo.png" alt="Arduino Logo"></td>
+                <td class="text-center"><img src="img/step4.png" alt="Pour the designated amount of coconut milk and water into a graduated cylinder"></td>
               </tr>
 
               <tr class="align-middle">
@@ -153,20 +160,60 @@
                   <h3>5</h3>
                 </th>
                 <td>
-                  <h3 class="howTo">Flask connects to Firebase and sends data for storage</h3>
+                  <h3 class="howTo">Mix the solution with a lab spatula</h3>
                 </td>
-                <td class="text-center"><img src="img/firebase-logo.png" alt="Firebase"></td>
+                <td class="text-center"><img src="img/step5.png" alt="Mix the solution with a lab spatula"></td>
               </tr>
 
               <tr class="align-middle">
                 <!-- scope = row specifies header cell is the header is the header for that row-->
                 <th scope="row" class="table-secondary">
-                  <h3>1</h3>
+                  <h3>6</h3>
                 </th>
                 <td>
-                  <h3 class="howTo">Start Python Flask server</h3>
+                  <h3 class="howTo">Dig the dirt around the stem of the basil plant</h3>
                 </td>
-                <td class="text-center"><img src="img/python-logo.png" alt="Python Logo"></td>
+                <td class="text-center"><img src="img/step6.png" alt="Dig the dirt around the stem of the basil plant"></td>
+              </tr>
+              <tr class="align-middle">
+                <!-- scope = row specifies header cell is the header is the header for that row-->
+                <th scope="row" class="table-secondary">
+                  <h3>7</h3>
+                </th>
+                <td>
+                  <h3 class="howTo">Pour the solution of coconut milk and water near the roots of the plant</h3>
+                </td>
+                <td class="text-center"><img src="img/step7.png" alt="Pour the solution of coconut milk and water near the roots of the plant"></td>
+              </tr>
+              <tr class="align-middle">
+                <!-- scope = row specifies header cell is the header is the header for that row-->
+                <th scope="row" class="table-secondary">
+                  <h3>8</h3>
+                </th>
+                <td>
+                  <h3 class="howTo">Add the soil back to the areas surrounding the roots</h3>
+                </td>
+                <td class="text-center"><img src="img/step8.png" alt="Add the soil back to the areas surrounding the roots"></td>
+              </tr>
+              <tr class="align-middle">
+                <!-- scope = row specifies header cell is the header is the header for that row-->
+                <th scope="row" class="table-secondary">
+                  <h3>9</h3>
+                </th>
+                <td>
+                  <h3 class="howTo">Measure the height of the plant stem(s) and count the number of stems</h3>
+                </td>
+                <td class="text-center"><img src="img/step9.png" alt="Measure the height of the plant stem(s) and count the number of stems"></td>
+              </tr>
+              <tr class="align-middle">
+                <!-- scope = row specifies header cell is the header is the header for that row-->
+                <th scope="row" class="table-secondary">
+                  <h3>10</h3>
+                </th>
+                <td>
+                  <h3 class="howTo">Note the data collected for each plant in a notebook</h3>
+                </td>
+                <td class="text-center"><img src="img/step10.png" alt="Note the data collected for each plant in a notebook"></td>
               </tr>
 
             </tbody>
@@ -179,15 +226,14 @@
 
       
 
-      <!-- Footer -->
-       <footer class="p-5 footer text-light text-center position-relative">
-            <div class="container">
-                <p class="lead">Copyright &copy; SE 2024 Bootstrap Demo</p>
-                <a href="#" class="position-absolute bottom-0 end-0 p-5">
-                    <i class="bi bi-arrow-up-circle h2 icon-white"></i>
-                </a>
-            </div>  
-       </footer>
-    </div>
-  </body>
-</html>
+
+<!-- Footer -->
+<footer class="p-5 footer text-light text-center position-relative">
+  <div class="container">
+    <p class="lead">Copyright &copy; Ayden Pinto SE 2024-2025</p>
+    
+    <a href="#" class="position-absolute bottom-0 end-0 p-5 animate-bounce">
+      <i class="bi bi-arrow-up-circle h2 icon-white"></i>
+    </a>
+  </div>  
+</footer>

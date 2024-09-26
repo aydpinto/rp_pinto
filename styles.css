@@ -1,24 +1,122 @@
 /* ----------------- Class CSS ----------------- */
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+i {
+    display: inline-block;
+    width: 30px;
+  }
 
+.accordion-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .accordion {
+    width: 200%;
+  }
+  
+  /* Make all accordion buttons and bodies the same size */
+  .accordion-button {
+    padding: 1rem;
+    height: 60px; /* Set a fixed height for accordion headers */
+    border: 1px solid transparent;
+    transition: none; /* Prevent any transition that might change the size */
+    overflow: hidden; /* Ensure text does not overflow */
+  }
+  
+  .accordion-body {
+    height: 150px; /* Set a fixed height for accordion body */
+    overflow: auto; /* Ensure content inside body is scrollable if it exceeds the height */
+  }
+  
+  /* Keep the padding and border consistent when the accordion is opened */
+  .accordion-button:not(.collapsed) {
+    padding: 1rem;
+    height: 60px; /* Keep the same height for opened accordion headers */
+    border: 1px solid transparent;
+  }
+  
+  /* Ensure that the accordion adapts to smaller screens */
+  @media (max-width: 576px) {
+    .accordion {
+      max-width: 100%;
+    }
+  }
+  
+.procedure img {
+    display: block;
+    width: 200px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height */
+    object-fit: contain; /* Ensure the entire image fits within the given size */
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ddd; /* Optional: Adds a border to visually see the image bounds */
+    padding: 5px; /* Optional: Adds padding around the image */
+    background-color: #f9f9f9; /* Optional: Adds a background color in case images don't fully fill the space */
+}
+.card {
+    box-shadow:  0 4px 20px 0 rgba(20, 150, 92, 0.2);
+    background-color: rgba(1, 69, 20, 0.569);
+    transition: 0.3s;
+ }
+
+.author img {
+    display: block;
+    width: 500px; /* Set a fixed width */
+    height: 600px; /* Set a fixed height */
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #ddd; /* Optional: Adds a border to visually see the image bounds */
+    padding: 8px; /* Optional: Adds padding around the image */
+    background-color: #8fa3ab; /* Optional: Adds a background color in case images don't fully fill the space */
+}
+.table thead th {
+    background-color: #8fa3ab 
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  .animate-bounce {
+    animation: bounce 3s infinite;
+  }
+  
 .about{
     width:400px;
     margin: auto;
 }
 
 .about-team{
-    color:rgb(82, 81, 81)
+    color:rgb(0, 0, 0)
 }
 
-.authors{
-    background-color: #dbe3e7;
+.author{
+    background-color: #687e86;
+}
+.navbar{
+ opacity: 0.8; 
 }
 
+#navBarr {
+    margin: 0 auto;
+}
 .body{
-    background-color: rgb(90, 92, 92);
+    background-color: #687e86;
+    font-family: "Tinos", serif
 }
 
 .footer{
-    background-color: #023E8A;
+    background-color: #263c43;
 }
 
 .icon-white{            /* Arrow icon at bottom of page */
@@ -26,7 +124,7 @@
 }
 
 .nb-background-color{   /* navbar background color */
-    background-color: #023E8A;
+    background-color: #f3f3f3;
 }
 
 .nbMenuItem{               /* navbar link text properties */
@@ -48,12 +146,12 @@
 }
 
 .procedure{
-    background-color: #dbe3e7;
+    background-color: #687e86;
     padding: 1px;
 }
 
 .showcase{
-    background-color: #8fa3ab; /*#0096c7*/
+    background-color: #687e86; /*#0096c7*/
 }
 
 /* ----------------- ID CSS ----------------- */
@@ -81,4 +179,10 @@
 .hover-underline-animation:hover:after {
     transform: scaleX(1);
     /*transform-origin: bottom left;*/
+}
+
+@media (max-width: 800px) {
+
+
+
 }
