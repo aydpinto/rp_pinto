@@ -81,6 +81,7 @@
           </div>
         </div>
       </nav>
+      
      <!-- About the Author -->
 <section class="author">
   <div class="container">
@@ -88,31 +89,63 @@
     <h1 class="text-center about-team">About the Author</h1>
     <hr><br>
   
-</section>
-      <section class="py-5">
-        <div class="container">
-          <div class="row">
-            <!-- First Column -->
-            <div class="col-md-4 text-center">
-              <img src="img/IMG_3288.jpg" class="img-fluid mb-3" alt="Image 1">
-              <h5>Title for Image 1</h5>
-              <p>Some text describing the first image.</p>
+    <style>
+      .image-container {
+        position: relative;
+        width: 100%;
+        padding-top: 75%; /* Adjust for desired aspect ratio */
+        overflow: hidden;
+      }
+  
+      .image-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ... (existing body content) ... -->
+  
+    <!-- Three Columns Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <!-- First Column -->
+          <div class="col-md-4 text-center">
+            <div class="image-container">
+              <img src="img/SCR-20240926-ujuy.png" alt="Image 1">
             </div>
-            <!-- Second Column -->
-            <div class="col-md-4 text-center">
-              <img src="img/Soccer.jpg" class="img-fluid mb-3" alt="Image 2">
-              <h5>Title for Image 2</h5>
-              <p>Some text describing the second image.</p>
+            <h5>Ayden  is a Junior at High technology High School</h5>
+            <p>Some text describing the first image.</p>
+          </div>
+          <!-- Second Column -->
+          <div class="col-md-4 text-center">
+            <div class="image-container">
+              <img src="img/Soccer.jpg" alt="Image 2">
             </div>
-            <!-- Third Column -->
-            <div class="col-md-4 text-center">
-              <img src="img/travel.JPG" class="img-fluid mb-3" alt="Image 3">
-              <h5>Title for Image 3</h5>
-              <p>Some text describing the third image.</p>
+            <h5>Ayden is a soccer goalkeeper</h5>
+            <p>Some text describing the second image.</p>
+          </div>
+          <!-- Third Column -->
+          <div class="col-md-4 text-center">
+            <div class="image-container">
+              <img src="img/travel.JPG" alt="Image 3">
             </div>
+            <h5>Ayden loves to travel</h5>
+            <p>Some text describing the third image.</p>
           </div>
         </div>
-
+      </div>
+    </section>
+  
+    <!-- About the Author Section -->
+    <section class="author">
+      <!-- ... (as shown above) ... -->
+    </section>
 
 <!-- Footer -->
 <footer class="p-5 footer text-light text-center position-relative">

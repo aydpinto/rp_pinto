@@ -13,8 +13,22 @@ i {
     padding: 20px;
   }
   
-  .accordion {
+
+  .image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 75%; /* Adjust this value to set the desired aspect ratio */
+    overflow: hidden;
   }
+  
+  .image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }  
   
   /* Make all accordion buttons and bodies the same size */
   .accordion-button {
@@ -51,9 +65,9 @@ i {
     object-fit: contain; /* Ensure the entire image fits within the given size */
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid #ddd; /* Optional: Adds a border to visually see the image bounds */
-    padding: 5px; /* Optional: Adds padding around the image */
-    background-color: #f9f9f9; /* Optional: Adds a background color in case images don't fully fill the space */
+    border: 1px solid #ddd;
+    padding: 5px;
+    background-color: #f9f9f9; 
 }
 .card {
     box-shadow:  0 4px 20px 0 rgba(20, 150, 92, 0.2);
@@ -67,9 +81,9 @@ i {
     height: 600px; /* Set a fixed height */
     margin-left: auto;
     margin-right: auto;
-    border: 3px solid #ddd; /* Optional: Adds a border to visually see the image bounds */
-    padding: 8px; /* Optional: Adds padding around the image */
-    background-color: #8fa3ab; /* Optional: Adds a background color in case images don't fully fill the space */
+    border: 3px solid #ddd; 
+    padding: 8px; 
+    background-color: #8fa3ab; 
 }
 .table thead th {
     background-color: #8fa3ab 

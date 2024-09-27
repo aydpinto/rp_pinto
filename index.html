@@ -1,208 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bootstrap Class Demo</title>
+<head>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bootstrap Class Demo</title>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-      integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="styles.css" />
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+    crossorigin="anonymous"
+  />
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
+  <!-- Bootstrap Icons CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD"
+    crossorigin="anonymous"
+  />
 
-    <style>
-      .accordion-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 20px;
-      }
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Custom Styles -->
+  <style>
+    .accordion-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 20px;
+    }
+    .accordion {
+      width: 100%;
+      max-width: 600px;
+    }
+    .accordion-button {
+      padding: 1rem;
+      border: 1px solid transparent;
+      transition: none;
+    }
+    .accordion-button:not(.collapsed) {
+      padding: 1rem;
+      border: 1px solid transparent;
+    }
+    @media (max-width: 576px) {
       .accordion {
-        width: 100%;
-        max-width: 600px;
+        max-width: 100%;
       }
-      .accordion-button {
-        padding: 1rem;
-        border: 1px solid transparent;
-        transition: none;
-      }
-      .accordion-button:not(.collapsed) {
-        padding: 1rem;
-        border: 1px solid transparent;
-      }
-      @media (max-width: 576px) {
-        .accordion {
-          max-width: 100%;
+    }
+  </style>
+</head>
+<body class="body">
+  <div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-green nb-background-color sticky-top rounded-pill w-75 justify-content-center" id="navBarr">
+      <style>
+        .custom-navbar {
+          background-color: rgba(255, 255, 255, 0.8);
         }
-      }
-    </style>
-  </head>
-  <body class="body">
-    <div class="">
-      <nav class="navbar navbar-expand-lg navbar-green nb-background-color sticky-top rounded-pill w-75 justify-content-center" id="navBarr">
-        <style>
-          .custom-navbar {
-            background-color: rgba(255, 255, 255, 0.8);
-          }
-        </style>
-        <div class="container">
-          <a href="#" class="navbar-brand">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="48" viewBox="0 0 512 512" fill="#023020" class="d-inline-block align-text-top w-50">
-              <path d="M272 96c-78.6 0-145.1 51.5-167.7 122.5c33.6-17 71.5-26.5 111.7-26.5l88 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-16 0-72 0s0 0 0 0c-16.6 0-32.7 1.9-48.3 5.4c-25.9 5.9-49.9 16.4-71.4 30.7c0 0 0 0 0 0C38.3 298.8 0 364.9 0 440l0 16c0 13.3 10.7 24 24 24s24-10.7 24-24l0-16c0-48.7 20.7-92.5 53.8-123.2C121.6 392.3 190.3 448 272 448l1 0c132.1-.7 239-130.9 239-291.4c0-42.6-7.5-83.1-21.1-119.6c-2.6-6.9-12.7-6.6-16.2-.1C455.9 72.1 418.7 96 376 96L272 96z"/>
-            </svg>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navmenu">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a href="author.html" class="nav-link hover-underline-animation nbMenuItem">Author</a>
-              </li>
-              <li class="nav-item">
-                <a href="procedure.html" class="nav-link hover-underline-animation nbMenuItem">Procedure</a>
-              </li>
-              <li class="nav-item">
-                <a href="results.html" class="nav-link hover-underline-animation nbMenuItem">Results</a>
-              </li>
-            </ul>
-          </div>
+      </style>
+      <div class="container">
+        <a href="#" class="navbar-brand">
+          <!-- SVG or Logo -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="48" viewBox="0 0 512 512" fill="#023020" class="d-inline-block align-text-top w-50">
+            <!-- SVG content -->
+            <!-- Your SVG content here -->
+          </svg>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="author.html" class="nav-link hover-underline-animation nbMenuItem">Author</a>
+            </li>
+            <li class="nav-item">
+              <a href="procedure.html" class="nav-link hover-underline-animation nbMenuItem">Procedure</a>
+            </li>
+            <li class="nav-item">
+              <a href="results.html" class="nav-link hover-underline-animation nbMenuItem">Results</a>
+            </li>
+          </ul>
         </div>
-      </nav>
-      <section class="showcase text-light p-2 text-center">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 p-0 d-flex align-items-center">
-              <img class="img-fluid" src="img/hi.png" alt="Animated image of basil plant">
-            </div>
-            <div class="col-sm-6 p-0 d-flex align-items-center">
-              <div class="container">
-                <h1 class="display-4">Investigating the Effect of Coconut Milk on the Growth Height and Number of Stems of <em>Ocimum Basilicum</em> Plants</h1>
-                <h2>Ayden Pinto | Mr. Craig Queenan</h2>
-              </div>
+      </div>
+    </nav>
+
+    <!-- Showcase Section -->
+    <section class="showcase text-light p-2 text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 p-0 d-flex align-items-center">
+            <img class="img-fluid" src="img/hi.png" alt="Animated image of basil plant">
+          </div>
+          <div class="col-sm-6 p-0 d-flex align-items-center">
+            <div class="container">
+              <h1 class="display-4">Investigating the Effect of Coconut Milk on the Growth Height and Number of Stems of <em>Ocimum basilicum</em> Plants</h1>
+              <h2>Ayden Pinto | Mr. Craig Queenan</h2>
             </div>
           </div>
         </div>
-      </section>
-      <section class="overview text-dark p-2 text-left">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4 p-3 d-flex justify-content-center">
-              <div class="text-center">
-                <h1>Background</h1>
-                <hr style="border-top: 1px solid #0077d8;">
-                <div class="accordion-wrapper">
-                  <div class="accordion" id="accordionBackground">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingOneBackground">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneBackground" aria-expanded="true" aria-controls="collapseOneBackground">
-                          Background Accordion #1
-                        </button>
-                      </h2>
-                      <div id="collapseOneBackground" class="accordion-collapse collapse show" aria-labelledby="headingOneBackground" data-bs-parent="#accordionBackground">
-                        <div class="accordion-body">Background content for Accordion #1.</div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingTwoBackground">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoBackground" aria-expanded="false" aria-controls="collapseTwoBackground">
-                          Background Accordion #2
-                        </button>
-                      </h2>
-                      <div id="collapseTwoBackground" class="accordion-collapse collapse" aria-labelledby="headingTwoBackground" data-bs-parent="#accordionBackground">
-                        <div class="accordion-body">Background content for Accordion #2.</div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingThreeBackground">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeBackground" aria-expanded="false" aria-controls="collapseThreeBackground">
-                          Background Accordion #3
-                        </button>
-                      </h2>
-                      <div id="collapseThreeBackground" class="accordion-collapse collapse" aria-labelledby="headingThreeBackground" data-bs-parent="#accordionBackground">
-                        <div class="accordion-body">Background content for Accordion #3.</div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingFourBackground">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourBackground" aria-expanded="false" aria-controls="collapseFourBackground">
-                          Background Accordion #4
-                        </button>
-                      </h2>
-                      <div id="collapseFourBackground" class="accordion-collapse collapse" aria-labelledby="headingFourBackground" data-bs-parent="#accordionBackground">
-                        <div class="accordion-body">Background content for Accordion #4.</div>
+      </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="overview text-dark p-2 text-left">
+      <div class="container">
+        <!-- First Row: Background and Rationale -->
+        <div class="row">
+          <!-- Background Accordion -->
+          <div class="col-sm-6 p-3 d-flex justify-content-center">
+            <div class="text-center">
+              <h1>Background</h1>
+              <hr style="border-top: 1px solid #0077d8;">
+              <div class="accordion-wrapper">
+                <div class="accordion" id="accordionBackground">
+                  <!-- Background Accordion Item #1 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOneBackground">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneBackground" aria-expanded="true" aria-controls="collapseOneBackground">
+                        Background
+                      </button>
+                    </h2>
+                    <div id="collapseOneBackground" class="accordion-collapse collapse show" aria-labelledby="headingOneBackground" data-bs-parent="#accordionBackground">
+                      <div class="accordion-body">
+                        Background content for Accordion #1.
                       </div>
                     </div>
                   </div>
+                  <!-- Background Accordion Item #2 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwoBackground">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoBackground" aria-expanded="false" aria-controls="collapseTwoBackground">
+                        Background
+                      </button>
+                    </h2>
+                    <div id="collapseTwoBackground" class="accordion-collapse collapse" aria-labelledby="headingTwoBackground" data-bs-parent="#accordionBackground">
+                      <div class="accordion-body">
+                        Background content for Accordion #2.
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Add more background accordion items as needed -->
                 </div>
               </div>
             </div>
-            <div class="col-sm-4 p-3 text-center">
-              <a href="https://drive.google.com/file/d/1Z3cTqSR6YaecYCdUIGkkXyLOZbo-0CGk/view?usp=sharing" target="_blank">
-                <img class="img-fluid" src="img/Ayden Pinto  Craig.png" alt="Image of the cover of my research paper with link to the paper.">
-              </a>
-            </div>
-            <div class="col-sm-4 p-3 d-flex justify-content-center">
-              <div class="text-center">
-                <h1>Rationale</h1>
-                <hr style="border-top: 1px solid #0077d8;">
-                <div class="accordion-wrapper">
-                  <div class="accordion" id="accordionRationale">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingOneRationale">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneRationale" aria-expanded="false" aria-controls="collapseOneRationale">
-                          Rationale Accordion #1
-                        </button>
-                      </h2>
-                      <div id="collapseOneRationale" class="accordion-collapse collapse" aria-labelledby="headingOneRationale" data-bs-parent="#accordionRationale">
-                        <div class="accordion-body">Rationale content for Accordion #1.</div>
+          </div>
+
+          <!-- Rationale Accordion -->
+          <div class="col-sm-6 p-3 d-flex justify-content-center">
+            <div class="text-center">
+              <h1>Rationale</h1>
+              <hr style="border-top: 1px solid #0077d8;">
+              <div class="accordion-wrapper">
+                <div class="accordion" id="accordionRationale">
+                  <!-- Rationale Accordion Item #1 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOneRationale">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneRationale" aria-expanded="true" aria-controls="collapseOneRationale">
+                        Rationale Accordion #1
+                      </button>
+                    </h2>
+                    <div id="collapseOneRationale" class="accordion-collapse collapse show" aria-labelledby="headingOneRationale" data-bs-parent="#accordionRationale">
+                      <div class="accordion-body">
+                        Rationale content for Accordion #1.
                       </div>
                     </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingTwoRationale">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoRationale" aria-expanded="false" aria-controls="collapseTwoRationale">
-                          Rationale Accordion #2
-                        </button>
-                      </h2>
-                      <div id="collapseTwoRationale" class="accordion-collapse collapse" aria-labelledby="headingTwoRationale" data-bs-parent="#accordionRationale">
-                        <div class="accordion-body">Rationale content for Accordion #2.</div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingThreeRationale">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeRationale" aria-expanded="false" aria-controls="collapseThreeRationale">
-                          Rationale Accordion #3
-                        </button>
-                      </h2>
-                      <div id="collapseThreeRationale" class="accordion-collapse collapse" aria-labelledby="headingThreeRationale" data-bs-parent="#accordionRationale">
-                        <div class="accordion-body">Rationale content for Accordion #3.</div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingFourRationale">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourRationale" aria-expanded="false" aria-controls="collapseFourRationale">
-                          Rationale Accordion #4
-                        </button>
-                      </h2>
-                      <div id="collapseFourRationale" class="accordion-collapse collapse" aria-labelledby="headingFourRationale" data-bs-parent="#accordionRationale">
-                        <div class="accordion-body">Rationale content for Accordion #4.</div>
+                  </div>
+                  <!-- Rationale Accordion Item #2 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwoRationale">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoRationale" aria-expanded="false" aria-controls="collapseTwoRationale">
+                        Rationale Accordion #2
+                      </button>
+                    </h2>
+                    <div id="collapseTwoRationale" class="accordion-collapse collapse" aria-labelledby="headingTwoRationale" data-bs-parent="#accordionRationale">
+                      <div class="accordion-body">
+                        Rationale content for Accordion #2.
                       </div>
                     </div>
                   </div>
@@ -210,118 +191,118 @@
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-sm-4 p-3 d-flex justify-content-center">
-              <div class="text-center">
-                <h1>Conclusions</h1>
-                <hr style="border-top: 1px solid #0077d8;">
-                <div class="accordion-wrapper">
-                  <div class="accordion" id="accordionConclusions">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingOneConclusions">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneConclusions" aria-expanded="false" aria-controls="collapseOneConclusions">
-                          Conclusion Accordion #1
-                        </button>
-                      </h2>
-                      <div id="collapseOneConclusions" class="accordion-collapse collapse" aria-labelledby="headingOneConclusions" data-bs-parent="#accordionConclusions">
-                        <div class="accordion-body">Conclusions content for Accordion #1.</div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingTwoConclusions">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoConclusions" aria-expanded="false" aria-controls="collapseTwoConclusions">
-                          Conclusion Accordion #2
-                        </button>
-                      </h2>
-                      <div id="collapseTwoConclusions" class="accordion-collapse collapse" aria-labelledby="headingTwoConclusions" data-bs-parent="#accordionConclusions">
-                        <div class="accordion-body">Conclusions content for Accordion #2.</div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingThreeConclusions">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeConclusions" aria-expanded="false" aria-controls="collapseThreeConclusions">
-                          Conclusion Accordion #3
-                        </button>
-                      </h2>
-                      <div id="collapseThreeConclusions" class="accordion-collapse collapse" aria-labelledby="headingThreeConclusions" data-bs-parent="#accordionConclusions">
-                        <div class="accordion-body">Conclusions content for Accordion #3.</div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingFourConclusions">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourConclusions" aria-expanded="false" aria-controls="collapseFourConclusions">
-                          Conclusion Accordion #4
-                        </button>
-                      </h2>
-                      <div id="collapseFourConclusions" class="accordion-collapse collapse" aria-labelledby="headingFourConclusions" data-bs-parent="#accordionConclusions">
-                        <div class="accordion-body">Conclusions content for Accordion #4.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4 p-3 text-center"></div>
-            <div class="col-sm-4 p-3 d-flex justify-content-center">
-              <div class="text-center">
-                <h1>Future</h1>
-                <hr style="border-top: 1px solid #0077d8;">
-                <div class="accordion-wrapper">
-                  <div class="accordion" id="accordionFuture">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingOneFuture">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneFuture" aria-expanded="false" aria-controls="collapseOneFuture">
-                          Future Accordion #1
-                        </button>
-                      </h2>
-                      <div id="collapseOneFuture" class="accordion-collapse collapse" aria-labelledby="headingOneFuture" data-bs-parent="#accordionFuture">
-                        <div class="accordion-body">Future content for Accordion #1.</div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingTwoFuture">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoFuture" aria-expanded="false" aria-controls="collapseTwoFuture">
-                          Future Accordion #2
-                        </button>
-                      </h2>
-                      <div id="collapseTwoFuture" class="accordion-collapse collapse" aria-labelledby="headingTwoFuture" data-bs-parent="#accordionFuture">
-                        <div class="accordion-body">Future content for Accordion #2.</div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingThreeFuture">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeFuture" aria-expanded="false" aria-controls="collapseThreeFuture">
-                          Future Accordion #3
-                        </button>
-                      </h2>
-                      <div id="collapseThreeFuture" class="accordion-collapse collapse" aria-labelledby="headingThreeFuture" data-bs-parent="#accordionFuture">
-                        <div class="accordion-body">Future content for Accordion #3.</div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingFourFuture">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourFuture" aria-expanded="false" aria-controls="collapseFourFuture">
-                          Future Accordion #4
-                        </button>
-                      </h2>
-                      <div id="collapseFourFuture" class="accordion-collapse collapse" aria-labelledby="headingFourFuture" data-bs-parent="#accordionFuture">
-                        <div class="accordion-body">Future content for Accordion #4.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>  
         </div>
-      </section>
-      <footer class="p-5 footer text-light text-center position-relative">
-        <div class="container">
-          <p class="lead">Copyright &copy; Ayden Pinto SE 2024-2025</p>
-          <a href="#" class="position-absolute bottom-0 end-0 p-5 animate-bounce">
-            <i class="bi bi-arrow-up-circle h2 icon-white"></i>
-          </a>
-        </div>  
-      </footer>
-  </body>
+
+        <!-- Second Row: Linked Image in Center Column -->
+        <div class="row">
+          <div class="col-sm-4 p-3"></div>
+          <div class="col-sm-4 p-3 text-center">
+            <!-- Linked Image -->
+            <a href="https://drive.google.com/file/d/1Z3cTqSR6YaecYCdUIGkkXyLOZbo-0CGk/view?usp=sharing" target="_blank">
+              <img class="img-fluid" src="img/Ayden Pinto  Craig.png" alt="Image of the cover of my research paper with link to the paper.">
+            </a>
+          </div>
+          <div class="col-sm-4 p-3"></div>
+        </div>
+
+        <!-- Third Row: Conclusions and Future -->
+        <div class="row">
+          <!-- Conclusions Accordion -->
+          <div class="col-sm-6 p-3 d-flex justify-content-center">
+            <div class="text-center">
+              <h1>Conclusions</h1>
+              <hr style="border-top: 1px solid #0077d8;">
+              <div class="accordion-wrapper">
+                <div class="accordion" id="accordionConclusions">
+                  <!-- Conclusions Accordion Item #1 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOneConclusions">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneConclusions" aria-expanded="true" aria-controls="collapseOneConclusions">
+                        Conclusion Accordion #1
+                      </button>
+                    </h2>
+                    <div id="collapseOneConclusions" class="accordion-collapse collapse show" aria-labelledby="headingOneConclusions" data-bs-parent="#accordionConclusions">
+                      <div class="accordion-body">
+                        Conclusions content for Accordion #1.
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Conclusions Accordion Item #2 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwoConclusions">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoConclusions" aria-expanded="false" aria-controls="collapseTwoConclusions">
+                        Conclusion Accordion #2
+                      </button>
+                    </h2>
+                    <div id="collapseTwoConclusions" class="accordion-collapse collapse" aria-labelledby="headingTwoConclusions" data-bs-parent="#accordionConclusions">
+                      <div class="accordion-body">
+                        Conclusions content for Accordion #2.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Future Accordion -->
+          <div class="col-sm-6 p-3 d-flex justify-content-center">
+            <div class="text-center">
+              <h1>Future</h1>
+              <hr style="border-top: 1px solid #0077d8;">
+              <div class="accordion-wrapper">
+                <div class="accordion" id="accordionFuture">
+                  <!-- Future Accordion Item #1 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOneFuture">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneFuture" aria-expanded="true" aria-controls="collapseOneFuture">
+                        Future Accordion #1
+                      </button>
+                    </h2>
+                    <div id="collapseOneFuture" class="accordion-collapse collapse show" aria-labelledby="headingOneFuture" data-bs-parent="#accordionFuture">
+                      <div class="accordion-body">
+                        Future content for Accordion #1.
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Future Accordion Item #2 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwoFuture">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoFuture" aria-expanded="false" aria-controls="collapseTwoFuture">
+                        Future Accordion #2
+                      </button>
+                    </h2>
+                    <div id="collapseTwoFuture" class="accordion-collapse collapse" aria-labelledby="headingTwoFuture" data-bs-parent="#accordionFuture">
+                      <div class="accordion-body">
+                        Future content for Accordion #2.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-5 footer text-light text-center position-relative">
+      <div class="container">
+        <p class="lead">&copy; Ayden Pinto SE 2024-2025</p>
+        <a href="#" class="position-absolute bottom-0 end-0 p-5 animate-bounce">
+          <i class="bi bi-arrow-up-circle h2 icon-white"></i>
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"
+  ></script>
+</body>
 </html>
