@@ -199,3 +199,102 @@ i {
 
 
 }
+.scientific-name {
+  font-style: italic;
+  color: #f3f3f3;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.header {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #687e86;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px 0 rgba(20, 150, 92, 0.2);
+}
+
+.header h1 {
+  color: #f3f3f3;
+  margin-bottom: 0.5rem;
+}
+
+.research-info {
+  background-color: #dbe3e7;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px 0 rgba(20, 150, 92, 0.2);
+  margin-bottom: 2rem;
+  color: #263c43;
+}
+
+.chart-container {
+  background: #dbe3e7;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px 0 rgba(20, 150, 92, 0.2);
+  margin: 2rem 0;
+}
+
+.raw-data {
+  background-color: #dbe3e7;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.data-visualization h2,
+.raw-data h2 {
+  color: #263c43;
+  margin-bottom: 1.5rem;
+  font-family: "Tinos", serif;
+  text-align: center;
+}
+
+.table {
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px 0 rgba(20, 150, 92, 0.2);
+}
+
+.table thead th {
+  background-color: #8fa3ab;
+  color: #263c43;
+  font-weight: bold;
+  border-bottom: 2px solid #687e86;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #dbe3e7;
+}
+
+.table tbody tr:hover {
+  background-color: #8fa3ab;
+  transition: background-color 0.3s ease;
+}
+
+.table-info {
+  background-color: #8fa3ab !important;
+  font-weight: bold;
+  color: #263c43;
+}
+
+@media (max-width: 800px) {
+  .chart-container {
+      padding: 10px;
+  }
+  
+  .table {
+      font-size: 0.9rem;
+  }
+  
+  .header h1 {
+      font-size: 1.8rem;
+  }
+  
+  .scientific-name {
+      font-size: 1.2rem;
+  }
+}
