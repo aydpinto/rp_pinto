@@ -228,7 +228,32 @@ i {
   margin-bottom: 2rem;
   color: #263c43;
 }
+.research-info {
+  background-color: #dbe3e7;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px 0 rgba(20, 150, 92, 0.2);
+  margin-bottom: 2rem;
+  color: #263c43;
+  text-align: center;
+}
 
+.research-description {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.chart-container {
+  background: #dbe3e7;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px 0 rgba(20, 150, 92, 0.2);
+  margin: 2rem 0;
+  height: 400px; /* Fixed height for the chart container */
+  position: relative;
+}
 .chart-container {
   background: #dbe3e7;
   padding: 20px;
@@ -295,6 +320,15 @@ i {
   }
   
   .scientific-name {
+      font-size: 1.2rem;
+  }
+}
+@media (max-width: 800px) {
+  .chart-container {
+      height: 300px; /* Smaller height for mobile devices */
+  }
+  
+  .research-description {
       font-size: 1.2rem;
   }
 }

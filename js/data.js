@@ -43,21 +43,21 @@ Average,0.5618,0.2802,0.1296,0.0525`;
             tension: 0.1
         },
         {
-            label: 'G1',
+            label: 'Group 1 (33% Coconut Milk)',
             data: chartData.map(row => row.G1),
             borderColor: 'rgb(22, 163, 74)',
             backgroundColor: 'rgba(22, 163, 74, 0.1)',
             tension: 0.1
         },
         {
-            label: 'G2',
+            label: 'Group 2 (66% Coconut Milk)',
             data: chartData.map(row => row.G2),
             borderColor: 'rgb(220, 38, 38)',
             backgroundColor: 'rgba(220, 38, 38, 0.1)',
             tension: 0.1
         },
         {
-            label: 'G3',
+            label: 'Group 3 (100% Coconut Milk)',
             data: chartData.map(row => row.G3),
             borderColor: 'rgb(147, 51, 234)',
             backgroundColor: 'rgba(147, 51, 234, 0.1)',

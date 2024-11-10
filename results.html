@@ -47,12 +47,12 @@
 
         <div class="container">
             <section class="research-info">
-                <p>Investigation of biomass production in sweet basil (Ocimum Basilicum) under varying concentrations of coconut milk treatment.</p>
+                <p class="research-description">Investigation of biomass production in sweet basil (Ocimum Basilicum) under varying concentrations of coconut milk treatment.</p>
             </section>
 
             <section class="data-visualization">
                 <h2>Biomass Results</h2>
-                <div class="chart-container">
+                <div class="chart-container" id="chartWrapper">
                     <canvas id="biomassChart"></canvas>
                 </div>
             </section>
@@ -65,9 +65,9 @@
                             <tr>
                                 <th>Plant Sample</th>
                                 <th>Control</th>
-                                <th>G1</th>
-                                <th>G2</th>
-                                <th>G3</th>
+                                <th>Group 1</th>
+                                <th>Group 2</th>
+                                <th>Group 3</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -137,6 +137,58 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/data.js"></script>
+    <script>
+        // Add resize observer to handle chart resizing
+        const chartWrapper = document.getElementById('chartWrapper');
+        const chartCanvas = document.getElementById('biomassChart');
+        let chart;
+
+        const resizeObserver = new ResizeObserver(entries => {
+            if (chart) {
+                chart.resize();
+            }
+        });
+
+        resizeObserver.observe(chartWrapper);
+
+        // Chart data and configuration
+        const data = {
+            labels: ['Control', 'Group 1', 'Group 2', 'Group 3'],
+            datasets: [{
+                label: 'Average Biomass (g)',
+                data: [0.562, 0.280, 0.130, 0.053],
+                backgroundColor: 'rgba(20, 150, 92, 0.2)',
+                borderColor: 'rgba(20, 150, 92, 1)',
+                borderWidth: 1
+            }]
+        };
+
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Biomass (g)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Treatment Groups'
+                        }
+                    }
+                }
+            }
+        };
+
+        // Create the chart
+        chart = new Chart(chartCanvas, config);
+    </script>
 </body>
 </html>
