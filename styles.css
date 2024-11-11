@@ -411,3 +411,80 @@ a:hover {
     padding-top: 70%;
   }
 }
+/* New square container styles */
+.square-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  border: 3px solid #ddd;
+  background-color: #8fa3ab;
+  box-shadow: 0 4px 20px rgba(20, 150, 92, 0.2);
+}
+
+.square-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 8px;
+}
+
+/* New container box styling */
+.square-box {
+  width: 400px;
+  padding: 20px;
+  margin: 0 auto 30px;
+  background-color: rgba(1, 69, 20, 0.569);
+  border-radius: 10px;
+  color: #f3f3f3;
+}
+
+.square-box h5 {
+  margin: 15px 0;
+  color: #f3f3f3;
+  font-size: 1.2rem;
+}
+
+/* New column layout */
+.square-col {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* New row layout */
+.square-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* New list styling */
+.square-box ul {
+  padding-left: 20px;
+  margin-top: 15px;
+}
+
+.square-box li {
+  margin-bottom: 10px;
+  text-align: left;
+  line-height: 1.4;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 800px) {
+  .square-container {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .square-box {
+    width: 300px;
+  }
+}
+
